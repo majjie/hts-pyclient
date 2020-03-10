@@ -48,3 +48,10 @@ class DebugLevel(Enum):
     Information = 2,
     Warning = 3,
     Error = 4
+
+class RoutineType(Enum):
+    Unknown = 0,
+    Test = 1,
+    Diagnostic = 2,
+    Maintenance = 3,
+    Repair = 4
