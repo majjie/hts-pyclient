@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='hts-pyclient',
-    version='0.4',
+    version='0.5',
     packages=find_packages(exclude=['tests*']),
     license='MIT',
     description='A Python 3 client, to communicate with the HTS framework',

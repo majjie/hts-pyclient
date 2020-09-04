@@ -27,5 +27,5 @@ class InstrumentationClient:
     def delete(self, key: str, value: float) -> RoutineStatus:
         post("Instrumentation/Delete", { "key": key })
 
-    def update(self, status: RoutineStatus):
+    def update(self, key: str, value: float):
         post("Instrumentation/Update", { "key": key, "value": value })

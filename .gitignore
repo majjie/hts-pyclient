@@ -1,1 +1,4 @@
 HtsPyClient/__pycache__/
+dist
+build
+hts_pyclient.egg-info

@@ -1,5 +1,5 @@
 from typing import List
-from HtsPyClient.Common import ColumnDataType
+from HtsPyClient.Common import ColumnDataType, RoutineStatus
 
 class ColumnDefinition:
     def __init__(self, name: str, nullable: bool, dataType: ColumnDataType):
@@ -63,3 +63,10 @@ class RowInsertion:
             "table": self.table,
             "cells": [c.jsonFragment() for c in self.cells]
         }
+
+class FieldValue:
+    def __init__(self, key: str, value: object, status: RoutineStatus, exists: bool):
+        self.key = key
+        self.value = value
+        self.status = status
+        self.exists = exists

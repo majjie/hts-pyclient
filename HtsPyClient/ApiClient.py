@@ -1,5 +1,6 @@
 from HtsPyClient.EngineClient import EngineClient
 from HtsPyClient.DebugClient import DebugClient
+from HtsPyClient.FormsClient import FormsClient
 from HtsPyClient.InstrumentationClient import InstrumentationClient
 from HtsPyClient.DataClient import *
 from HtsPyClient.UserInterfaceClient import *
@@ -13,6 +14,11 @@ class ApiClient:
         self.__data = DataClient(port)
         self.__ui = UserInterfaceClient(port)
         self.__routineInfo = RoutineInfoClient(port)
+        self.__forms = FormsClient(port)
+
+    @property
+    def forms(self) -> FormsClient:
+        return self.__forms
 
     @property
     def data(self) -> DataClient:
